@@ -1,0 +1,7 @@
+{
+    "name": "pidoc",
+    "version": "1.0.0",
+    "main": "./pidoc.js",
+    "ignore": [ ],
+    "dependencies": { }
+}
