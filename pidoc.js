@@ -61,7 +61,7 @@
                     //read file
                     var lastLineBullet = false;
                     requires.fs.readFileSync(dir + '/' + file).toString().split('\n').forEach(function (line) {
-                        var l = line.toString().replace(/^\s+/, '').replace(/#region /g, '///##').replace(/<property>/g, '<property>###').replace(/<method>/g, '<method>###').replace(/<param name="/g, '<param>* ').replace(/">/g, ': ').replace(/<returns>/g, 'Returns: ');
+                        var l = line.toString().replace(/^\s+/, '').replace(/#region /g, '///##').replace(/<property>/g, '<property>###').replace(/<method>/g, '<method>###').replace(/<param name="/g, '<param>* ').replace(/<exception cref="/g, '<exception>').replace(/">/g, ': ').replace(/<returns>/g, 'Returns: ');
                         var rex = /(<([^>]+)>)/ig;
                         l = l.replace(rex, "");
                         if (l.indexOf('///') === 0) {
